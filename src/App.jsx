@@ -15,7 +15,10 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <header className="bg-[url('/hero_image.jpg')] bg-cover bg-center bg-no-repeat text-white section-padding text-center relative">
+      <header
+        className="bg-cover bg-center bg-no-repeat text-white section-padding text-center relative"
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}hero_image.jpg)` }}
+      >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="container-max relative z-10">
           {/* Hero logo */}
