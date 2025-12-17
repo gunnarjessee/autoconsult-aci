@@ -111,4 +111,4 @@ out
 # Temporary files
 *.tmp
 *.temp
-./package-lock.json
+package-lock.json

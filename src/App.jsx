@@ -3,9 +3,14 @@ import ACI from './assets/ACI.svg'
 
 function App() {
 
-  let phone = '(540) BULL-SHT';
+  let phone = '(540) 525-3189';
   let email = 'gunnarjessee@gmail.com'
   let facebook = 'https://herosafety.net'
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted');
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -122,7 +127,18 @@ function App() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Ready to Inspect Your Next Vehicle?
           </h2>
-          <p className="text-lg md:text-xl mb-12 opacity-90">
+          {/* Contact Form with email and phone*/}
+          <div>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-2xl mx-auto">
+              <input type="email" placeholder="Email" className="w-full p-2 bg-gray-700 text-white rounded-md border-2 border-gray-300" />
+              <input type="phone" placeholder="Phone" className="w-full p-2 bg-gray-700 text-white rounded-md border-2 border-gray-300" />
+              <textarea placeholder="Tell us about the vehicle" className="w-full p-2 bg-gray-700 text-white rounded-md border-2 border-gray-300" />
+              <button type="submit" className="btn-primary w-full hover:bg-blue-600">
+                <span>Submit</span>
+              </button>
+            </form>
+          </div>
+          <p className="text-lg md:text-xl mb-12 opacity-90 mt-4">
             Don't buy blind. Get the facts before you buy with our comprehensive pre-purchase inspection service.
           </p>
         </div>
@@ -155,18 +171,7 @@ function App() {
               </svg>
               <span>{phone}</span>
             </a>
-            <a 
-              onClick={()=>{
-                navigator.clipboard.writeText(email);
-                alert('Copied Email to clipboard')
-              }} 
-              className="flex items-center gap-2 hover:text-blue-400 transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <span>{email}</span>
-            </a>
+            
           </div>
         </div>
       </footer>
