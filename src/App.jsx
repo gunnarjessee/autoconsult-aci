@@ -163,7 +163,7 @@ function App() {
               <span>Facebook</span>
             </a>
             <a 
-              href="tel:+1234567890" 
+              href="tel:+15405253189" 
               className="flex items-center gap-2 hover:text-blue-400 transition-colors"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
