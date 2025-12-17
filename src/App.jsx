@@ -28,7 +28,7 @@ function App() {
             className="mx-auto w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-lg mb-6 md:object-[center_65%]"
           />
           <h1 className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg">
-            Automative Consulting Inc
+            Automative Consultants Inc
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
             Professional Pre-Purchase Vehicle Inspections
@@ -176,6 +176,9 @@ function App() {
             </a>
             
           </div>
+          <p className="text-center text-sm md:text-base mt-10 opacity-70">
+            © {new Date().getFullYear()} Automative Consultants, Inc. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>

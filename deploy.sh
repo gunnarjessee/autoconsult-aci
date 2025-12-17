@@ -2,12 +2,12 @@
 set -euo pipefail
 
 # Deploy built static site to nginx web root.
-# Default deploy path uses "$PWD/../var/..." which resolves to "/var/..." when run from /root/...
+# Default deploy path targets /var/www/html/blueridgeaci.com (same as "$HOME/../var/www/html/blueridgeaci.com").
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # You can override these:
-: "${DEPLOY_DIR:=${REPO_ROOT}/../var/www/html/blueridgeaci.com}"
+: "${DEPLOY_DIR:=//var/www/html/blueridgeaci.com}"
 : "${NODE_INSTALL_CMD:=npm ci}"
 : "${BUILD_CMD:=npm run build}"
 
